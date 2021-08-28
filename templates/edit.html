@@ -1,0 +1,16 @@
+Formulario de edicion
+
+{% for empleado in empleados %}
+<form class="add-form-container" action="/update" method="POST">
+	<input class="add-input" name="id" id="id" type="text" placeholder="id empleado" value="{{ empleado[0] }}"
+		readonly=»readonly»>
+	<input class="add-input" name="nombre" id="nombre" type="text" placeholder="Nombre del empleado"
+		value="{{ empleado[1] }}">
+	<input class="add-input" name="cargo" id="cargo" type="text" placeholder="Cargo" value="{{ empleado[2] }}">
+	<input class="add-input" name="telefono" id="telefono" type="text" placeholder="Telefono" value="{{ empleado[3] }}">
+	<input class="add-input" name="edad" id="edad" type="text" placeholder="Edad del empleado" value="{{ empleado[4] }}">
+	<input class="add-input" name="direccion" id="direccion" type="text" placeholder="Direccion del empleado"
+		value="{{ empleado[5] }}">
+	<input class="add-btn" id="submit-add" type="submit" value="Editar Empleado">
+</form>
+{% endfor %}

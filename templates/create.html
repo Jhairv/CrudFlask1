@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form class="add-form-container" method="POST">
+	<input class="add-input" name="id" type="text" placeholder="id empleado" required>
+	<input class="add-input" name="nombre" type="text" placeholder="Nombre del empleado" required>
+	<input class="add-input" name="cargo" type="text" placeholder="Cargo" required>
+	<input class="add-input" name="telefono" type="text" placeholder="Telefono" required>
+	<input class="add-input" name="edad" type="text" placeholder="Edad del empleado" required>
+	<input class="add-input" name="direccion" type="text" placeholder="Direccion del empleado" required>
+	<input class="add-btn" id="submit-add" type="submit" value="Agregar Empleado">
+</form>
+<button class="add-btn" id="close">Cerrar</button>
+
+{% endblock %}
